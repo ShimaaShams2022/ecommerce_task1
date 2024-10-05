@@ -21,15 +21,16 @@ class ProductResponse {
   ProductResponse.fromJson(dynamic json) {
     id = json['id'];
     title = json['title'];
-    price = json['price'];
+    //price = json['price'];
+    price = json['price'] is int?(json['price'] as int).toDouble():json['price'].toDouble();
     description = json['description'];
     category = json['category'];
     image = json['image'];
     rating = json['rating'] != null ? Rating.fromJson(json['rating']) : null;
   }
-  num? id;
+  int? id;
   String? title;
-  num? price;
+  double? price;
   String? description;
   String? category;
   String? image;

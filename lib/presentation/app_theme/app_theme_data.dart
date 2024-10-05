@@ -6,7 +6,7 @@ class AppThemeData{
 
 
   static Color primary = const Color(0xFF2011B0);
-  static Color iconAdd=  Color(0xFF150C73);
+  static Color iconAdd=  const Color(0xFF150C73);
   static Color appBarTitleColor = const Color(0xFF06004F);
   static Color primaryDark = const Color(0xFF06004F);
   static Color primaryText =Colors.black;

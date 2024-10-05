@@ -7,11 +7,11 @@ class Rating {
       this.count,});
 
   Rating.fromJson(dynamic json) {
-    rate = json['rate'];
+    rate = json['rate'] is int?(json['rate'] as int).toDouble():json['rate'].toDouble();;
     count = json['count'];
   }
-  num? rate;
-  num? count;
+  double? rate;
+  int? count;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
